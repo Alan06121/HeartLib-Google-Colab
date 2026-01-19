@@ -1,10 +1,13 @@
 # HeartLib Optimized Music Generation
 
-Optimized scripts for running [HeartMuLa](https://github.com/HeartMuLa/heartlib) music generation with maximum performance on NVIDIA GPUs, especially A100.
-
 <a target="_blank" href="https://colab.research.google.com/github/theelderemo/HeartLib-Google-Colab/blob/main/HeartLib.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+</a> 
+
+Optimized scripts for running [HeartMuLa](https://github.com/HeartMuLa/heartlib) music generation with maximum performance on NVIDIA GPUs, especially A100.
+
+![GitHub Repo stars](https://img.shields.io/github/stars/theelderemo/HeartLib-Google-Colab)
+
 
 ## Features
 
@@ -168,8 +171,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - **Issues**: Open an issue in this repo
 - **Original Model Issues**: Report to [HeartMuLa repo](https://github.com/HeartMuLa/heartlib/issues)
 - **Optimization Questions**: Check PyTorch and Flash Attention documentation
-
-## Star History
+ 
 
 If you find this useful, please star the repo!
 
