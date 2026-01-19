@@ -35,7 +35,7 @@ Optimized scripts for running [HeartMuLa](https://github.com/HeartMuLa/heartlib)
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-1. Upload `heartlib_optimized.ipynb` to your environment
+1. Upload `heartlib.ipynb` to your environment
 2. Run the cells in order:
    - Cell 1: Setup Environment
    - Cell 2: Download Checkpoints
