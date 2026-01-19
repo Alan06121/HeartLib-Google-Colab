@@ -78,17 +78,19 @@ The script automatically applies these optimizations:
 - **Flash Attention 2**: Auto-enabled if installed
 - **Memory optimization**: CUDA allocator configured for efficiency
 
-All parameters:
+# All parameters:
 
---model_path (required): Path to the pretrained model checkpoint
---lyrics: Path to lyrics file (default: ./assets/lyrics.txt)
---tags: Path to tags file (default: ./assets/tags.txt)
---save_path: Output audio file path (default: ./assets/output.mp3)
---max_audio_length_ms: Maximum audio length in milliseconds (default: 240000)
---topk: Top-k sampling parameter for generation (default: 50)
---temperature: Sampling temperature for generation (default: 1.0)
---cfg_scale: Classifier-free guidance scale (default: 1.5)
---version: The version of HeartMuLa, choose between [3B, 7B]. (default: 3B) # 7B version not released yet.
+--model_path (required): Path to the pretrained model checkpoint  
+--lyrics: Path to lyrics file (default: ./assets/lyrics.txt)  
+--tags: Path to tags file (default: ./assets/tags.txt)  
+--save_path: Output audio file path (default: ./assets/output.mp3)  
+--max_audio_length_ms: Maximum audio length in milliseconds (default: 240000)  
+--topk: Top-k sampling parameter for generation (default: 50)  
+--temperature: Sampling temperature for generation (default: 1.0)  
+--cfg_scale: Classifier-free guidance scale (default: 1.5)  
+--version: The version of HeartMuLa, choose between [3B, 7B]. (default: 3B) # 7B version not released yet.  
+
+## As it sits, with what I have, it generates great output, and auto adjust output lenght based on the amount of text/lyrics.
 
 ### Model Versions
 
